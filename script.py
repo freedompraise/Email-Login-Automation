@@ -17,3 +17,10 @@ username = browser.find_element_by_id('identifierId')
 username.send_keys(usernameStr)
 nextButton = browser.find_element_by_xpath("//button[contains(text(), 'Next')]")
 nextButton.click()
+
+password = WebDriverWait(browser, 10).until(
+    expected_conditions.presence_of_element_located((By.NAME, 'Passwd')))
+password.send_keys(passwordStr)
+
+signInButton = browser.find_element_by_xpath("//button[contains(text(), 'Next')]")
+nextButton.click()
