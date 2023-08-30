@@ -15,5 +15,5 @@ browser.get('https://accounts.google.com/ServiceLogin?service=mail&continue=http
 
 username = browser.find_element_by_id('identifierId')
 username.send_keys(usernameStr)
-nextButton = browser.find_element_by_id('identifierNext')
+nextButton = browser.find_element_by_xpath("//button[contains(text(), 'Next')]")
 nextButton.click()
