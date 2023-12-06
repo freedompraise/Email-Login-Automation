@@ -10,7 +10,7 @@ load_dotenv()
 usernameStr = 'praise.dike@eng.uniben.edu'
 passwordStr = os.getenv('PASSWORD')
 
-browser = webdriver.Chrome()
+browser = webdriver.Chrome(executable_path="chromedriver.exe")
 browser.get('https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/#identifier')
 
 username = browser.find_element_by_id('identifierId')
